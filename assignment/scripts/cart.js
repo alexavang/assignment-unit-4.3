@@ -33,12 +33,12 @@ function isFull() {
 }
 
 function removeItem(item) {
-  if (basket.includes(item)) {
-      const i = basket.indexOf(item);
-      basket.splice(i, 1);
-      return item;
+  const i = basket.indexOf(item);
+  if (i >= 0) {
+    basket.splice(i, 1);
+    return item;
   } else {
-      return null;
+    return null;
   }
 }
 
@@ -74,7 +74,7 @@ console.log(basket);
 console.log(basket.length);
 
 console.log("List of Items (Removing):");
-removeItem("Soju")
+removeItem("Soju");
 console.log(basket);
 
 // DO NOT MODIFY
